@@ -3,7 +3,7 @@
 # REPO: https://github.com/CarlCit/QuantumultX/
 # UPDATED: 2024-06-04 18:33:55
 
-HOST,mesu.apple.com,Block
-HOST,gdmf.apple.com,Block
-HOST,updates-http.cdn-apple.com,Block
-HOST,xp.apple.com,Block
+HOST,mesu.apple.com,REJECT
+HOST,gdmf.apple.com,REJECT
+HOST,updates-http.cdn-apple.com,REJECT
+HOST,xp.apple.com,REJECT
