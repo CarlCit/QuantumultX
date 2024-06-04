@@ -1,0 +1,18 @@
+
+
+# > Gmail
+DOMAIN,pop.gmail.com,Mail
+DOMAIN,imap.gmail.com,Mail
+DOMAIN,smtp.gmail.com,Mail
+DOMAIN,imap.googlemail.com,Mail
+
+# > Outlook
+DOMAIN,outlook.office365.com,Mail
+DOMAIN,smtp.office365.com,Mail
+DOMAIN,imap-mail.outlook.com,Mail
+DOMAIN,smtp-mail.outlook.com,Mail
+
+# > iCloud
+# DOMAIN-SUFFIX,mail.icloud.com,Mail
+# DOMAIN-SUFFIX,mail.icloud.com.cn,Mail
+# DOMAIN-SUFFIX,mail.me.com,Mail
