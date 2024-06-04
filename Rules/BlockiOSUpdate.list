@@ -1,5 +1,10 @@
-# Block iOS Update
-host, mesu.apple.com, reject
-host, gdmf.apple.com, reject
-host, updates-http.cdn-apple.com, reject
-host, xp.apple.com, reject
+# NAME: Block iOS Update
+# AUTHOR: CarlCit
+# REPO: https://github.com/CarlCit/QuantumultX/
+# UPDATED: 2024-04-29 13:35:55
+# HOST: 18
+# HOST-SUFFIX: 22
+HOST,mesu.apple.com,Block
+HOST,gdmf.apple.com,Block
+HOST,updates-http.cdn-apple.com,Block
+HOST,xp.apple.com,Block
