@@ -2,4 +2,3 @@
 
 QuantumultX
 
-Loon
