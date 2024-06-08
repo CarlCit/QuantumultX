@@ -1,6 +1,3 @@
-
- 
-;^http://example.com/resource1/4/ url reject-dict
 [MITM]
 hostname = ccsp-egmas.sf-express.com
 
