@@ -5,6 +5,8 @@
 
 # Bartender 5
 
+
+PROCESS-PATH-REGEX,(?i).*Applications/Bartender\ 5.*,REJECT
 PROCESS-PATH-REGEX,^/Applications/Bartender\\ 5\\.app/Contents/MacOS/Bartender\\ 5$,REJECT
 PROCESS-PATH-REGEX,^~/Applications/Bartender\\ 5\\.app/Contents/MacOS/Bartender\\ 5$,REJECT
 
