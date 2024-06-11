@@ -5,7 +5,7 @@
 
 # Bartender 5
 
-PROCESS-NAME-REGEX,(?i)Bartender,REJECT
+PROCESS-NAME-REGEX,(?i)Bartender 5,REJECT
 
 
 / ***
