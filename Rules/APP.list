@@ -5,8 +5,10 @@
 
 # Bartender 5
 
-PROCESS-NAME-REGEX,(?i)Bartender\ 5,REJECT
+PROCESS-NAME-REGEX,(?i)Bartender,REJECT
 
+
+/ ***
 PROCESS-PATH-REGEX,(?i).*Application\\chrome.*,REJECT
 
 PROCESS-PATH-REGEX,(?i).*Applications/Bartender\ 5.*,REJECT
@@ -25,3 +27,4 @@ PROCESS-PATH-REGEX,^/Users/[^/]+/Library/Bartender\ 5.*$,REJECT
 # Bartender 5
 PROCESS-PATH-REGEX,^/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome$,REJECT
 PROCESS-PATH-REGEX,^~/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome$,REJECT
+*** /
