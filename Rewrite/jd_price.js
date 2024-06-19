@@ -1,9 +1,9 @@
-const ScriptName = "京东|淘宝 比价";
+const ScriptName = "京东比价";
 const $ = new Env(ScriptName);
 
-const ScriptIdentifier = "jd_tb_price";
-const ScriptVersion = 8;
-const ScriptUrl = `https://service.2ti.st/QuanX/Script/${ScriptIdentifier}`
+const ScriptIdentifier = "jd_price";
+const ScriptVersion = 1;
+const ScriptUrl = `https://raw.githubusercontent.com/CarlCit/QuantumultX/main/Rewrite/${ScriptIdentifier}`
 
 const res = $request;
 const resp = isUndefined($response) ? null : $response;
