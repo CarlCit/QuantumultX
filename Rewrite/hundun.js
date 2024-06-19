@@ -1,6 +1,4 @@
 /*
- *
- *
 脚本功能：解锁vip课程,付费课程无限观看！
 软件版本：++
 下载地址：苹果商店下载
@@ -9,17 +7,14 @@
 电报频道：https://t.me/GieGie777
 问题反馈：
 使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！作者TG频道 : https://t.me/GieGie777
-*******************************
+*/
+
 [rewrite_local]
 # > 混沌 解锁vip课程,付费课程
 ^https?:\/\/((course)|(user)|(capi)).hundun.cn\/.*(course_detail|user_info|member_home_page).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/hundun.js
 
 [mitm] 
 hostname = *hundun.cn
-*
-*
-*/
-
 
 
 
