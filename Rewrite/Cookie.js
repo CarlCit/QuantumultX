@@ -32,8 +32,7 @@ hostname=api.revenuecat.com
 // ========= 动态ID ========= //
 const mapping = {
 'Cookie': ['allaccess','app.ft.Bookkeeping.lifetime'],
-'VSCO': ['membership'],
-'Photomator': ['pixelmator_photo_pro_access']
+'VSCO': ['membership']
   };
 
 // =========    固定部分  ========= // 
