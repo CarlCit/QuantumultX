@@ -31,7 +31,7 @@ https://appraven.net/collection/77299969
 
 [mitm]
 
-hostname=api.revenuecat.com, buy.itunes.apple.com
+hostname=api.revenuecat.com
 
 ***********************************/
 
