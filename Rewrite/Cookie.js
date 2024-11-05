@@ -23,9 +23,15 @@ https://appraven.net/collection/77299969
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-request-header https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
 
+# iTunes解锁系列
+# hostname = buy.itunes.apple.com
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+
+
+
 [mitm]
 
-hostname=api.revenuecat.com
+hostname=api.revenuecat.com, buy.itunes.apple.com
 
 ***********************************/
 
