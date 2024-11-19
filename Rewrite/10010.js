@@ -1,4 +1,4 @@
-/*
+
 
 获取方式：打开  中国联通 app 【官方版】-> 首页的流量查询获取 Cookie
 ===================
@@ -8,7 +8,6 @@ hostname = m.client.10010.com
 [rewrite_local]
 https:\/\/m\.client\.10010\.com\/(.*)\/smartwisdomCommon  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
 
- */
 
 const APIKey = 'YaYa_10010';
 $ = new API(APIKey, true);
