@@ -5,20 +5,19 @@
 使用说明：添加重写规则并打开鸿星尔克小程序即可获取Cookie
 更新时间：2024-11-25
 
-============ Quantumult X 配置 =============
-[MITM]
-hostname = hope.demogic.com
-
-[rewrite_local]
-^https:\/\/hope\.demogic\.com\/gic-wx-app\/get-member-asset\.json url https://raw.githubusercontent.com/Former-Years/Surge/refs/heads/main/Script/erke.js
-
-[task_local]
-15 9 * * * https://raw.githubusercontent.com/Former-Years/Surge/refs/heads/main/Script/erke.js, tag=鸿星尔克, enabled=true
 
 ================ Boxjs订阅 ================
 订阅地址：https://raw.githubusercontent.com/Former-Years/Surge/refs/heads/main/Script/xinian.boxjs.json
 
 */
+
+[MITM]
+hostname = hope.demogic.com
+
+[rewrite_local]
+https:\/\/hope\.demogic\.com\/gic-wx-app\/get-member-asset\.json url https://raw.githubusercontent.com/Former-Years/Surge/refs/heads/main/Script/erke.js
+
+
 
 const $ = new Env('鸿星尔克');
 const notify = $.isNode() ? require('./sendNotify') : '';
