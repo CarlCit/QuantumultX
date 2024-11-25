@@ -11,7 +11,8 @@
 
 
 [rewrite_local]
-https:\/\/hope\.demogic\.com\/gic-wx-app\/get-member-asset url https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/erke.js
+https:\/\/hope\.demogic\.com\/gic-wx-app\/get-member-asset url script-request-header https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/erke.js
+
 
 [mitm]
 hostname = hope.demogic.com
