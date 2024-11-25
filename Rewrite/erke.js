@@ -9,14 +9,13 @@
 ================ Boxjs订阅 ================
 订阅地址：https://raw.githubusercontent.com/Former-Years/Surge/refs/heads/main/Script/xinian.boxjs.json
 
-*/
-
-[MITM]
-hostname = hope.demogic.com
 
 [rewrite_local]
 https:\/\/hope\.demogic\.com\/gic-wx-app\/get-member-asset\.json url https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/erke.js
 
+[mitm]
+hostname = hope.demogic.com
+*/
 
 
 const $ = new Env('鸿星尔克');
