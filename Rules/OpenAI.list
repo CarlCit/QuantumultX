@@ -75,8 +75,8 @@ HOST-SUFFIX,stripe.com,OpenAI
 HOST-SUFFIX,turn.livekit.cloud,OpenAI
 
 # IP 段（加 no-resolve）
-IP-CIDR,24.199.123.28/32,no-resolve,OpenAI
-IP-CIDR,64.23.132.171/32,no-resolve,OpenAI
+IP-CIDR,24.199.123.28/32,OpenAI
+IP-CIDR,64.23.132.171/32,OpenAI
 
 # ASN
 IP-ASN,14061,OpenAI
