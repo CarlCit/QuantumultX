@@ -12,6 +12,11 @@ HOST-KEYWORD,openai,OpenAI
 HOST-KEYWORD,openaicom-api,OpenAI
 
 # 精确域名匹配（HOST）
+HOST,apple-relay.apple.com,OpenAI
+HOST,guzzoni.apple.com,OpenAI
+HOST,apple-relay.cloudflare.com,OpenAI
+HOST,apple-relay.fastly-edge.com,OpenAI
+HOST,cp4.cloudflare.com,OpenAI
 HOST,ai.google.dev,OpenAI
 HOST,alkalimakersuite-pa.clients6.google.com,OpenAI
 HOST,api.msn.com,OpenAI
@@ -38,7 +43,7 @@ HOST,sydney.bing.com,OpenAI
 HOST,www.bing.com,OpenAI
 
 # 后缀匹配（HOST-SUFFIX）
-HOST-SUFFIX,apple-relay.apple.com,OpenAI
+HOST-SUFFIX,smoot.apple.com,OpenAI
 HOST-SUFFIX,ai.com,OpenAI
 HOST-SUFFIX,perplexity.ai,OpenAI
 HOST-SUFFIX,algolia.net,OpenAI
