@@ -38,7 +38,7 @@ HOST,sydney.bing.com,OpenAI
 HOST,www.bing.com,OpenAI
 
 # 后缀匹配（HOST-SUFFIX）
-HOST-SUFFIXguzzoni.apple.com,OpenAI
+HOST-SUFFIX,guzzoni.apple.com,OpenAI
 HOST-SUFFIX,smoot.apple.com,OpenAI
 HOST-SUFFIX,apple-relay.cloudflare.com,OpenAI
 HOST-SUFFIX,apple-relay.fastly-edge.com,OpenAI
