@@ -81,6 +81,11 @@ HOST-SUFFIX,sentry.io,OpenAI
 HOST-SUFFIX,stripe.com,OpenAI
 HOST-SUFFIX,turn.livekit.cloud,OpenAI
 
+# 分流 Apple 软件 macOS Gatekeeper 验证的速度
+HOST-SUFFIX,ocsp2.apple.com,OpenAI
+HOST-SUFFIX,valid.apple.com,OpenAI
+HOST-SUFFIX,certs.apple.com,OpenAI
+
 # IP 段（加 no-resolve）
 IP-CIDR,24.199.123.28/32,OpenAI
 IP-CIDR,64.23.132.171/32,OpenAI
