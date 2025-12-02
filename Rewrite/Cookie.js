@@ -20,7 +20,6 @@ https://appraven.net/collection/77299969
 [rewrite_local]
 
 # ～ RevenueCat@ddgksf2013
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-request-header https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
 
 # iTunes解锁系列
@@ -37,9 +36,8 @@ hostname=api.revenuecat.com
 
 // ========= 动态ID ========= //
 const mapping = {
-'Cookie': ['allaccess','app.ft.Bookkeeping.lifetime'],
-'VSCO': ['membership']
-  };
+'Cookie': ['allaccess','app.ft.Bookkeeping.lifetime']
+};
 
 // =========    固定部分  ========= // 
 // =========  @ddgksf2021 ========= // 
