@@ -10,7 +10,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/fimo\.appfimo\.com\/fimo-.*\/(user|apple\/certificate|config|startPopConfig|filmAll) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js
+^https?:\/\/fimo\.appfimo\.com\/fimo-.*\/(user|apple\/certificate|config|startPopConfig|filmAll) url script-response-body https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/fimo.js
 
 [mitm]
 hostname = fimo.appfimo.com
