@@ -2,94 +2,141 @@
 # AUTHOR: Carl
 # REPO: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list
 # REPO: https://raw.githubusercontent.com/deezertidal/QuantumultX-Rewrite/refs/heads/master/rule/ai.list
-# UPDATED: 2025-08-12 12:26:00
+# REPO: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list
+# UPDATED: 2026-04-02 22:25:00
 
-# 关键词匹配（HOST-KEYWORD）
-HOST-KEYWORD,colab,OpenAI
-HOST-KEYWORD,developerprofiles,OpenAI
-HOST-KEYWORD,generativelanguage,OpenAI
+# --- OpenAI & ChatGPT ---
 HOST-KEYWORD,openai,OpenAI
 HOST-KEYWORD,openaicom-api,OpenAI
+HOST-KEYWORD,chatgpt-async-webps-prod-,OpenAI
+HOST,chatgpt.livekit.cloud,OpenAI
+HOST,host.livekit.cloud,OpenAI
+HOST,openai.com.cdn.cloudflare.net,OpenAI
+HOST,openaiapi-site.azureedge.net,OpenAI
+HOST,openaicomproductionae4b.blob.core.windows.net,OpenAI
+HOST,production-openaicom-storage.azureedge.net,OpenAI
+HOST,openai-api.arkoselabs.com,OpenAI
+HOST-SUFFIX,chat.com,OpenAI
+HOST-SUFFIX,chatgpt.com,OpenAI
+HOST-SUFFIX,oaistatic.com,OpenAI
+HOST-SUFFIX,oaiusercontent.com,OpenAI
+HOST-SUFFIX,openai.com,OpenAI
+HOST-SUFFIX,sora.com,OpenAI
+HOST-SUFFIX,turn.livekit.cloud,OpenAI
+HOST-SUFFIX,openaicom.imgix.net,OpenAI
+HOST-SUFFIX,client-api.arkoselabs.com,OpenAI
 
-# 精确域名匹配（HOST）
+# --- Google Gemini ---
+HOST-KEYWORD,generativelanguage,OpenAI
 HOST,ai.google.dev,OpenAI
+HOST,aida.googleapis.com,OpenAI
+HOST,aistudio.google.com,OpenAI
+HOST,alkalicore-pa.clients6.google.com,OpenAI
 HOST,alkalimakersuite-pa.clients6.google.com,OpenAI
+HOST,bard.google.com,OpenAI
+HOST,geller-pa.googleapis.com,OpenAI
+HOST,gemini.google.com,OpenAI
+HOST,makersuite.google.com,OpenAI
+HOST,proactivebackend-pa.googleapis.com,OpenAI
+HOST-SUFFIX,deepmind.com,OpenAI
+HOST-SUFFIX,deepmind.google,OpenAI
+HOST-SUFFIX,generativeai.google,OpenAI
+HOST-SUFFIX,generativelanguage.googleapis.com,OpenAI
+
+# --- Microsoft Copilot & Bing ---
 HOST,api.msn.com,OpenAI
 HOST,assets.msn.com,OpenAI
-HOST,browser-intake-datadoghq.com,OpenAI
-HOST,chat.openai.com.cdn.cloudflare.net,OpenAI
 HOST,copilot.microsoft.com,OpenAI
 HOST,gateway.bingviz.microsoft.net,OpenAI
 HOST,gateway.bingviz.microsoftapp.net,OpenAI
-HOST,gemini.google.com,OpenAI
-HOST,in.appcenter.ms,OpenAI
 HOST,location.microsoft.com,OpenAI
-HOST,makersuite.google.com,OpenAI
 HOST,odc.officeapps.live.com,OpenAI
-HOST,openai-api.arkoselabs.com,OpenAI
-HOST,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,OpenAI
-HOST,openaicomproductionae4b.blob.core.windows.net,OpenAI
-HOST,production-openaicom-storage.azureedge.net,OpenAI
 HOST,r.bing.com,OpenAI
-HOST,self.events.data.microsoft.com,OpenAI
 HOST,services.bingapis.com,OpenAI
-HOST,static.cloudflareinsights.com,OpenAI
 HOST,sydney.bing.com,OpenAI
 HOST,www.bing.com,OpenAI
-
-# 后缀匹配（HOST-SUFFIX）
-HOST-SUFFIX,guzzoni.apple.com,OpenAI
-HOST-SUFFIX,smoot.apple.com,OpenAI
-HOST-SUFFIX,apple-relay.cloudflare.com,OpenAI
-HOST-SUFFIX,apple-relay.fastly-edge.com,OpenAI
-HOST-SUFFIX,cp4.cloudflare.com,OpenAI
-HOST-SUFFIX,apple-relay.apple.com,OpenAI
-HOST-SUFFIX,ls.apple.com,OpenAI
-HOST-SUFFIX,ai.com,OpenAI
-HOST-SUFFIX,perplexity.ai,OpenAI
-HOST-SUFFIX,algolia.net,OpenAI
-HOST-SUFFIX,api.microsoftapp.net,OpenAI
-HOST-SUFFIX,api.statsig.com,OpenAI
-HOST-SUFFIX,apis.google.com,OpenAI
-HOST-SUFFIX,auth0.com,OpenAI
-HOST-SUFFIX,bard.google.com,OpenAI
 HOST-SUFFIX,bing-shopping.microsoft-falcon.io,OpenAI
-HOST-SUFFIX,challenges.cloudflare.com,OpenAI
-HOST-SUFFIX,chatgpt.com,OpenAI
-HOST-SUFFIX,chatgpt.livekit.cloud,OpenAI
-HOST-SUFFIX,client-api.arkoselabs.com,OpenAI
-HOST-SUFFIX,deepmind.com,OpenAI
-HOST-SUFFIX,deepmind.google,OpenAI
 HOST-SUFFIX,edgeservices.bing.com,OpenAI
-HOST-SUFFIX,events.statsigapi.net,OpenAI
-HOST-SUFFIX,featuregates.org,OpenAI
-HOST-SUFFIX,generativeai.google,OpenAI
-HOST-SUFFIX,host.livekit.cloud,OpenAI
-HOST-SUFFIX,identrust.com,OpenAI
-HOST-SUFFIX,intercom.io,OpenAI
-HOST-SUFFIX,intercomcdn.com,OpenAI
-HOST-SUFFIX,launchdarkly.com,OpenAI
-HOST-SUFFIX,oaistatic.com,OpenAI
-HOST-SUFFIX,oaiusercontent.com,OpenAI
-HOST-SUFFIX,observeit.net,OpenAI
-HOST-SUFFIX,openai.com,OpenAI
-HOST-SUFFIX,openaiapi-site.azureedge.net,OpenAI
-HOST-SUFFIX,openaicom.imgix.net,OpenAI
-HOST-SUFFIX,proactivebackend-pa.googleapis.com,OpenAI
-HOST-SUFFIX,segment.io,OpenAI
-HOST-SUFFIX,sentry.io,OpenAI
-HOST-SUFFIX,stripe.com,OpenAI
-HOST-SUFFIX,turn.livekit.cloud,OpenAI
+HOST-SUFFIX,api.microsoftapp.net,OpenAI
 
-# 分流 Apple 软件 macOS Gatekeeper 验证的速度
+# --- Anthropic Claude ---
+HOST-SUFFIX,anthropic.com,OpenAI
+HOST-SUFFIX,claude.ai,OpenAI
+HOST-SUFFIX,claude.com,OpenAI
+HOST-SUFFIX,clau.de,OpenAI
+HOST-SUFFIX,claudeusercontent.com,OpenAI
+IP-CIDR,160.79.104.0/23,OpenAI,no-resolve
+IP-CIDR6,2607:6bc0::/48,OpenAI,no-resolve
+
+# --- Apple Intelligence ---
+HOST-SUFFIX,apple-relay.apple.com,OpenAI
+HOST-SUFFIX,apple-relay.fastly-edge.com,OpenAI
+HOST-SUFFIX,apple-relay.cloudflare.com,OpenAI
+HOST-SUFFIX,apple-relay.akamaized.net,OpenAI
+HOST-SUFFIX,gateway.icloud.com,OpenAI
+HOST-SUFFIX,guzzoni.apple.com,OpenAI
+HOST-SUFFIX,cp4.cloudflare.com,OpenAI
+HOST-SUFFIX,gspe1-ssl.ls.apple.com,OpenAI
+HOST-SUFFIX,apps.mzstatic.com,OpenAI
+HOST-SUFFIX,smoot.apple.com,OpenAI
+HOST-SUFFIX,ls.apple.com,OpenAI
 HOST-SUFFIX,ocsp2.apple.com,OpenAI
 HOST-SUFFIX,valid.apple.com,OpenAI
 HOST-SUFFIX,certs.apple.com,OpenAI
 
-# IP 段（加 no-resolve）
-IP-CIDR,24.199.123.28/32,OpenAI
-IP-CIDR,64.23.132.171/32,OpenAI
+# --- Perplexity AI ---
+HOST-SUFFIX,pplx.ai,OpenAI
+HOST-SUFFIX,perplexity.ai,OpenAI
+HOST-SUFFIX,perplexity.com,OpenAI
 
-# ASN
+# --- Meta AI ---
+HOST,imagine.meta.com,OpenAI
+HOST-SUFFIX,meta.ai,OpenAI
+
+# --- Mistral AI ---
+HOST,chat.mistral.ai,OpenAI
+HOST,console.mistral.ai,OpenAI
+HOST-SUFFIX,mistral.ai,OpenAI
+
+# --- Grok AI (xAI) ---
+HOST,api.x.ai,OpenAI
+HOST-SUFFIX,x.ai,OpenAI
+HOST-SUFFIX,grok.com,OpenAI
+
+# --- JetBrains AI ---
+HOST-SUFFIX,grazie.ai,OpenAI
+HOST-SUFFIX,grazie.aws.intellij.net,OpenAI
+HOST-SUFFIX,jetbrains.ai,OpenAI
+
+# --- Trae AI & Others ---
+HOST,trae-api-sg.mchost.guru,OpenAI
+HOST-SUFFIX,trae.ai,OpenAI
+HOST-KEYWORD,colab,OpenAI
+HOST-KEYWORD,developerprofiles,OpenAI
+
+# --- Infrastructure & Analytics (Support) ---
+HOST,browser-intake-datadoghq.com,OpenAI
+HOST,in.appcenter.ms,OpenAI
+HOST,self.events.data.microsoft.com,OpenAI
+HOST,static.cloudflareinsights.com,OpenAI
+HOST-SUFFIX,algolia.net,OpenAI
+HOST-SUFFIX,api.statsig.com,OpenAI
+HOST-SUFFIX,apis.google.com,OpenAI
+HOST-SUFFIX,auth0.com,OpenAI
+HOST-SUFFIX,challenges.cloudflare.com,OpenAI
+HOST-SUFFIX,events.statsigapi.net,OpenAI
+HOST-SUFFIX,featuregates.org,OpenAI
+HOST-SUFFIX,identrust.com,OpenAI
+HOST-SUFFIX,intercom.io,OpenAI
+HOST-SUFFIX,intercomcdn.com,OpenAI
+HOST-SUFFIX,launchdarkly.com,OpenAI
+HOST-SUFFIX,observeit.net,OpenAI
+HOST-SUFFIX,segment.io,OpenAI
+HOST-SUFFIX,sentry.io,OpenAI
+HOST-SUFFIX,stripe.com,OpenAI
+
+# --- IP & ASN ---
+IP-CIDR,24.199.123.28/32,OpenAI,no-resolve
+IP-CIDR,64.23.132.171/32,OpenAI,no-resolve
 IP-ASN,14061,OpenAI
 IP-ASN,20473,OpenAI
