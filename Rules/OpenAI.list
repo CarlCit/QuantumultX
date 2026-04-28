@@ -65,8 +65,6 @@ HOST-SUFFIX,claude.ai,OpenAI
 HOST-SUFFIX,claude.com,OpenAI
 HOST-SUFFIX,clau.de,OpenAI
 HOST-SUFFIX,claudeusercontent.com,OpenAI
-IP-CIDR,160.79.104.0/23,OpenAI,no-resolve
-IP-CIDR6,2607:6bc0::/48,OpenAI,no-resolve
 
 # --- Apple Intelligence ---
 HOST-SUFFIX,apple-relay.apple.com,OpenAI
