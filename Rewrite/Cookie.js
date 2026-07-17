@@ -3,10 +3,12 @@
 > ScriptName        𝐑𝐞𝐯𝐞𝐧𝐮𝐞𝐂𝐚𝐭
 > UpdateTime        2026-07-17
 
-
 [rewrite_local]
-# 将两个脚本合并为一个本地双向脚本 revenuecat.js
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-analyze-echo-response https://raw.githubusercontent.com/CarlCit/QuantumultX/main/revenuecat.js
+# 这里的指令改为了 Quantumult X 标准的 script-response-body 和 script-request-header
+# 因为 QX 不能靠单一指令完美处理双向，通常用两个规则指向同一个脚本。合并脚本内部会自动分流处理。
+
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-request-header https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/Cookie.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) url script-response-body https://raw.githubusercontent.com/CarlCit/QuantumultX/refs/heads/main/Rewrite/Cookie.js
 
 [mitm]
 hostname=api.revenuecat.com
@@ -18,47 +20,59 @@ const mapping = {
   'Cookie': ['allaccess', 'app.ft.Bookkeeping.lifetime']
 };
 
-// =========    固定部分  ========= // 
-var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
-    obj = JSON.parse($response.body);
+// ================== 1. 请求阶段：清除 ETag 避免 304 ================== //
+if (typeof $request !== "undefined" && typeof $response === "undefined") {
+  var modifiedHeaders = $request.headers;
+  function setHeaderValue(e, a, d) {
+    var r = a.toLowerCase();
+    r in e ? e[r] = d : e[a] = d;
+  }
+  setHeaderValue(modifiedHeaders, "X-RevenueCat-ETag", "");
+  setHeaderValue(modifiedHeaders, "x-revenuecat-etag", "");
+  $done({ headers: modifiedHeaders });
+} 
 
-// 这里可以改成你自己的提示语
-obj.Attention = "自定义解锁已激活！"; 
+// ================== 2. 响应阶段：篡改数据，解锁会员 ================== //
+else if (typeof $response !== "undefined") {
+  var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
+      obj = JSON.parse($response.body);
 
-var ddgksf2013 = {
-  is_sandbox: !1,
-  ownership_type: "PURCHASED",
-  billing_issues_detected_at: null,
-  period_type: "normal",
-  expires_date: "2099-12-18T01:04:17Z",
-  grace_period_expires_date: null,
-  unsubscribe_detected_at: null,
-  original_purchase_date: "2022-09-08T01:04:18Z",
-  purchase_date: "2022-09-08T01:04:17Z",
-  store: "app_store"
-};
+  obj.Attention = "自定义解锁已激活！"; 
 
-// 1. 这里的 product_identifier 改为你自己的默认 ID
-var ddgksf2021 = {
-  grace_period_expires_date: null,
-  purchase_date: "2022-09-08T01:04:17Z",
-  product_identifier: "com.carl.premium.yearly", 
-  expires_date: "2099-12-18T01:04:17Z"
-};
+  var carlSub = {
+    is_sandbox: false,
+    ownership_type: "PURCHASED",
+    billing_issues_detected_at: null,
+    period_type: "normal",
+    expires_date: "2099-12-18T01:04:17Z",
+    grace_period_expires_date: null,
+    unsubscribe_detected_at: null,
+    original_purchase_date: "2022-09-08T01:04:18Z",
+    purchase_date: "2022-09-08T01:04:17Z",
+    store: "app_store"
+  };
 
-const match = Object.keys(mapping).find(e => ua.includes(e));
+  var carlEntitlement = {
+    grace_period_expires_date: null,
+    purchase_date: "2022-09-08T01:04:17Z",
+    product_identifier: "com.carl.premium.yearly", 
+    expires_date: "2099-12-18T01:04:17Z"
+  };
 
-if (match) {
-  let [e, s] = mapping[match];
-  // 2. 这里的兜底 ID 替换为你的默认 ID
-  s ? (ddgksf2021.product_identifier = s, obj.subscriber.subscriptions[s] = ddgksf2013) 
-    : (obj.subscriber.subscriptions["com.carl.premium.yearly"] = ddgksf2013);
-  obj.subscriber.entitlements[e] = ddgksf2021;
+  const match = Object.keys(mapping).find(e => ua.includes(e));
+
+  if (match) {
+    let [e, s] = mapping[match];
+    s ? (carlEntitlement.product_identifier = s, obj.subscriber.subscriptions[s] = carlSub) 
+      : (obj.subscriber.subscriptions["com.carl.premium.yearly"] = carlSub);
+    obj.subscriber.entitlements[e] = carlEntitlement;
+  } else {
+    obj.subscriber.subscriptions["com.carl.premium.yearly"] = carlSub;
+    obj.subscriber.entitlements.pro = carlEntitlement;
+    console.log('Carl 的专属解锁运行成功 🎉');
+  }
+
+  $done({ body: JSON.stringify(obj) });
 } else {
-  // 3. 这里的默认订阅 ID 替换为你的默认 ID
-  obj.subscriber.subscriptions["com.carl.premium.yearly"] = ddgksf2013;
-  obj.subscriber.entitlements.pro = ddgksf2021;
-  console.log('Carl 的专属解锁运行成功 🎉');
+  $done({});
 }
-
-$done({ body: JSON.stringify(obj) });
