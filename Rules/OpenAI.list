@@ -67,20 +67,12 @@ HOST-SUFFIX,clau.de,OpenAI
 HOST-SUFFIX,claudeusercontent.com,OpenAI
 
 # --- Apple Intelligence ---
-HOST-SUFFIX,apple-relay.apple.com,OpenAI
-HOST-SUFFIX,apple-relay.fastly-edge.com,OpenAI
-HOST-SUFFIX,apple-relay.cloudflare.com,OpenAI
-HOST-SUFFIX,apple-relay.akamaized.net,OpenAI
-HOST-SUFFIX,gateway.icloud.com,OpenAI
-HOST-SUFFIX,guzzoni.apple.com,OpenAI
-HOST-SUFFIX,cp4.cloudflare.com,OpenAI
-HOST-SUFFIX,gspe1-ssl.ls.apple.com,OpenAI
-HOST-SUFFIX,apps.mzstatic.com,OpenAI
-HOST-SUFFIX,smoot.apple.com,OpenAI
-HOST-SUFFIX,ls.apple.com,OpenAI
-HOST-SUFFIX,ocsp2.apple.com,OpenAI
-HOST-SUFFIX,valid.apple.com,OpenAI
-HOST-SUFFIX,certs.apple.com,OpenAI
+HOST-SUFFIX,apple-intelligence.cdn-apple.com,OpenAI
+HOST-SUFFIX,api.smoothrates.apple.com,OpenAI
+HOST-SUFFIX,gsa.apple.com,OpenAI
+HOST-SUFFIX,apple-cloudkit.com,OpenAI
+HOST,smoot.apple.com,OpenAI
+HOST,guzzoni.apple.com,OpenAI
 
 # --- Perplexity AI ---
 HOST-SUFFIX,pplx.ai,OpenAI
