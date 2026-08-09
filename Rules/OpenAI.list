@@ -3,7 +3,7 @@
 # REPO: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list
 # REPO: https://raw.githubusercontent.com/deezertidal/QuantumultX-Rewrite/refs/heads/master/rule/ai.list
 # REPO: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list
-# UPDATED: 2026-04-02 22:25:00
+# UPDATED: 2026-08-09 15:09:00
 
 # --- OpenAI & ChatGPT ---
 HOST-KEYWORD,openai,OpenAI
